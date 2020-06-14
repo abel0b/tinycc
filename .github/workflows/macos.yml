@@ -2,9 +2,9 @@ name: macos
 
 on:
   push:
-    branches: [ master ]
+    branches: [ mob ]
   pull_request:
-    branches: [ master ]
+    branches: [ mob ]
 
 jobs:
   build-macos:

@@ -2,9 +2,9 @@ name: linux
 
 on:
   push:
-    branches: [ master ]
+    branches: [ mob ]
   pull_request:
-    branches: [ master ]
+    branches: [ mob ]
 
 jobs:
   build-linux:
