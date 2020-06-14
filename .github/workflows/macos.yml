@@ -1,4 +1,4 @@
-name: macos
+name: linux
 
 on:
   push:
@@ -13,8 +13,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build
-      run: |
-        ./configure
-        make
-        make test
+    - name: configure
+      run: ./configure --cc=clang
+
+    - name: make
+      run: make
+
+    - name: make test
+      run: make test

@@ -8,13 +8,20 @@ on:
 
 jobs:
   build-linux:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Build
-      run: |
-        ./configure
-        make
-        make test
+    - name: configure
+      run: ./configure
+
+    - name: make
+      run: make
+
+    - name: make test
+      run: make test
