@@ -17,4 +17,4 @@ jobs:
       run: |
         Push-Location win32
         .\vsenv.ps1
-        .\build-tcc.bat -c cl.exe
+        .\build-tcc.bat -c cl
