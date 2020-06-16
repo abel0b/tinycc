@@ -1,0 +1,20 @@
+name: linux
+
+on:
+  push:
+    branches: [ mob ]
+  pull_request:
+    branches: [ mob ]
+
+jobs:
+  build-linux:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: make
+      run: |
+        Push-Location win32
+        .\vsenv.ps1
+        .\build-tcc.bat -c cl.exe

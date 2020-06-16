@@ -1,3 +1,7 @@
+| linux   | ![linux](https://github.com/abel0b/tinycc/workflows/linux/badge.svg)     |
+| macos   | ![macos](https://github.com/abel0b/tinycc/workflows/macos/badge.svg)     |
+| windows | ![windows](https://github.com/abel0b/tinycc/workflows/windows/badge.svg) |
+
 Tiny C Compiler - C Scripting Everywhere - The Smallest ANSI C compiler
 -----------------------------------------------------------------------
 

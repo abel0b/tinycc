@@ -8,11 +8,10 @@ on:
 
 jobs:
   build-linux:
-    runs-on: ${{ matrix.os }}
+    runs-on: macos-latest
 
     strategy:
       matrix:
-        os: [ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
         cc: [clang, gcc]
 
     steps:
@@ -23,6 +22,3 @@ jobs:
 
     - name: make
       run: make
-
-    - name: make test
-      run: [[ cc = "gcc" ]] && make test
