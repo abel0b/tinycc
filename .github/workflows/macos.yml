@@ -21,4 +21,6 @@ jobs:
       run: ./configure --cc=${{ matrix.cc }}
 
     - name: make
-      run: make
+      run: |
+        echo | gcc -E -Wp,-v -
+        make
